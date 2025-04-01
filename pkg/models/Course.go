@@ -11,6 +11,6 @@ type Course struct {
 	CourseStatus   string `gorm:"not null"`
 	Description    string `gorm:"not null"`
 	Image_url      string
-	UserInstructor uint
-	Modules        []Module `gorm:"foreignKey:ID"`
+	UserInstructor string
+	Modules        []Module
 }

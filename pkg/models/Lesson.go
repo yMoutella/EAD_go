@@ -7,5 +7,6 @@ type Lesson struct {
 	Title       string `gorm:"not null"`
 	Description string `gorm:"not null"`
 	VideoUrl    string `gorm:"not null"`
-	Module      Module `gorm:"not null"`
+	ModuleID    uint
+	Module      Module `gorm:"foreignKey:ModuleID;constraint:OnDelete:CASCADE;"`
 }
